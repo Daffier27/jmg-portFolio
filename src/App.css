@@ -1,0 +1,17 @@
+@import 'index.css';
+
+/* index.css */
+.main-header {
+  margin: 0;
+}
+
+.menu-button {
+  background-color: var(--main-bg);
+  border: none;
+}
+
+.menu-icon {
+  color: var(--main-bg); /* Líneas negras del ícono */
+  font-size: 24px;
+  width: 100%;
+}

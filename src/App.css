@@ -10,8 +10,24 @@
   border: none;
 }
 
+.menu-icon:active{
+  background-color: var(--secondary-bg);
+}
+
 .menu-icon {
-  color: var(--main-bg); /* Líneas negras del ícono */
+  color: var(--main-bg); 
   font-size: 24px;
   width: 100%;
+}
+
+.header-menu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:0.5rem
+}
+
+.menu-item{
+  text-decoration: none;
+  color: var(--main-text);
 }

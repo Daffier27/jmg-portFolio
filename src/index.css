@@ -58,4 +58,6 @@ table {
 body{
   background-color: var(--main-bg);
   color: var(--main-text);
+  margin-left: 0;
+  margin-right: 0;
 }

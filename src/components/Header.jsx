@@ -7,7 +7,7 @@ import switchOpenState from '../helpers/switchOpenState'
 
 
 export default function Header() {
-  const [isOpen, setOpen] = useState('open')
+  const [isOpen, setOpen] = useState(false)
   
   
 

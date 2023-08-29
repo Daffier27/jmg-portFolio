@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types'
 export default function HeaderMenu ({ isOpen }) {
-  if(isOpen === 'close'){
+  if(!isOpen){
     return null
-  }else if(isOpen === 'open'){
+  }
+  
 
   return(
     <nav className='header-menu'>
@@ -13,8 +14,7 @@ export default function HeaderMenu ({ isOpen }) {
     </nav>
   )
 }
-}
 
 HeaderMenu.protoTypes = {
-  isOpen: PropTypes.string
+  isOpen: PropTypes.bool
 }

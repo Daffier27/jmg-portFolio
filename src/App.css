@@ -31,11 +31,23 @@
 .menu-item{
   text-decoration: none;
   color: var(--main-text);
-  width: 100vw;
+  width: 99vw;
   text-align: center;
   padding: 1rem;
 }
 
 .menu-item:hover{
   background-color: var(--secondary-bg);
+}
+
+@media(min-width: 768px){
+  /* Header query */
+    .menu-button{
+      display: none;
+    }
+
+    .header-menu{
+      display: block;
+      flex-direction: row;
+    }
 }

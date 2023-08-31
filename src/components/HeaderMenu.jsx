@@ -1,20 +1,18 @@
 import PropTypes from 'prop-types'
-export default function HeaderMenu ({ isOpen }) {
-  if(!isOpen){
+export default function HeaderMenu ({ isOpen, size }) {
+  if(isOpen && size <= 768){
     return null
   }
-  
+  const items = [ 'Proyectos', 'Sobre mí', 'Habilidades', 'Contacto']
 
   return(
     <nav className='header-menu'>
-      <a className='menu-item' href="#">Proyectos</a>
-      <a className='menu-item' href="#">Sobre Mí</a>
-      <a className='menu-item' href="#">Habilidades</a>
-      <a className='menu-item' href="#">Contacto</a>
+      {items.map((item, index ) => <a key={index + item} className='menu-item' href='#'>{item}</a>)}
     </nav>
   )
 }
 
-HeaderMenu.protoTypes = {
-  isOpen: PropTypes.bool
+HeaderMenu.propTypes = {
+  isOpen: PropTypes.bool,
+  size: PropTypes.number
 }

@@ -4,50 +4,93 @@
 .main-header {
   margin: 0;
   border-bottom: 1px solid var(--secondary-text);
+  font-size: 1.5rem;
+  min-height: 60px;
+  display: grid;
+  grid-template-columns: 1fr  1fr; /* Agregar una columna adicional */
+  grid-template-rows: 1fr auto; /* Agregar una fila adicional */
+  align-items: center; /* Alinear verticalmente en el centro */
+}
+
+.logo {
+  display: inline;
+  padding: 0.3rem;
+  align-items: center;
+  position: relative;
+  grid-column: 1; /* Colocar el logo en la primera columna */
 }
 
 .menu-button {
+  padding: 0.3rem;
+  margin-right: 0.5rem;
   background-color: var(--main-bg);
+  justify-self: end;
+
   border: none;
+  grid-column: 2; /* Colocar el botón de menú en la segunda columna */
 }
 
-.menu-icon:active{
+.menu-icon:active {
   background-color: var(--secondary-bg);
 }
 
 .menu-icon {
-  color: var(--main-bg); 
-  font-size: 24px;
+  color: var(--main-bg);
+  font-size: 40px;
   width: 100%;
 }
 
-.header-menu{
+.header-menu {
   display: flex;
   flex-direction: column;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-gap: 10px;
+  justify-content: center;
   align-items: center;
-
+  grid-column: 1 / span 3; 
 }
 
-.menu-item{
+.menu-item {
   text-decoration: none;
   color: var(--main-text);
-  width: 99vw;
   text-align: center;
-  padding: 1rem;
+  padding: .8rem;
+  position: relative;
 }
 
-.menu-item:hover{
-  background-color: var(--secondary-bg);
+.menu-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #353535;
+  filter: blur(1rem);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
-@media(min-width: 768px){
+.menu-item:hover::before {
+  opacity: 1;
+  filter: blur(5px);
+}
+
+@media (min-width: 768px) {
   /* Header query */
-    .menu-button{
-      display: none;
-    }
+  .main-header {
+  display: flex;
+  justify-content: center;
+  min-height: 6rem;
+  }
 
-    .header-menu{
-      display: block;
-      flex-direction: row;
-    }
+  .menu-button {
+    display: none;
+  }
+
+  .header-menu {
+    display: block;
+    grid-column: auto; /* Restablecer la ubicación de la cuadrícula en pantallas más grandes */
+  }
 }

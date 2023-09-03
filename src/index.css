@@ -63,6 +63,6 @@ body{
 }
 
 #root {
-    max-width: 100vw; /* Limita el ancho al 100% de la ventana */
-    overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+    max-width: 100vw; 
+    overflow-x: hidden; 
 }

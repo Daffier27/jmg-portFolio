@@ -1,10 +1,13 @@
+ //Imports from node_modules
 import { useEffect, useState } from 'react'
 import {FiAlignJustify} from 'react-icons/fi'
 
+//Components
 import HeaderMenu from './HeaderMenu'
 import Logo from './Logo'
 import switchOpenState from '../helpers/switchOpenState'
 
+//Helpers or constants
 import {mobileWidth} from '../helpers/constants'
 
 
@@ -33,9 +36,7 @@ export default function Header() {
         <FiAlignJustify className='menu-icon' style={{color:'white'}}/>
       </button>  
       )}
-      
       <HeaderMenu isOpen={isOpen} size={windowWidth}/>
-      
     </header>
   )
 }

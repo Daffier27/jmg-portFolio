@@ -56,10 +56,9 @@ table {
 
 /*Main content*/ 
 body{
+  margin: 0;
   background-color: var(--main-bg);
   color: var(--main-text);
-  margin-left: 0;
-  margin-right: 0;
 }
 
 #root {

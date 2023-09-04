@@ -3,9 +3,9 @@ export default function MainContent() {
     <main className='main-content'>
       <section className='presentation-section'>
         <h1>Julián Morín González</h1>
-         <picture className="img-container">
+         <figure className="img-container">
           <img src='../assets/img/juli-image.png'  alt='personal image of julian' />
-        </picture> 
+        </figure> 
       </section>
     </main>
   )

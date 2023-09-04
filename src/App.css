@@ -109,24 +109,37 @@
 
 .main-content{
   margin:1.5rem; 
-  display: flex;
-  flex-direction:row;
-}
-
-.main-content h1 {
-  font-size: xx-large;
-  background: linear-gradient(45deg, #FF0000, #FF3333, #FF6666, #FF9999, #0000FF, #3333FF, #6666FF, #9999FF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 4vw; 
-  font-weight: bold; 
   
 }
 
-.img-container {
-  max-width: 100px;
+.main-content > .presentation-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+.main-content h1 {
+  font-size: 30rem;
+  background: linear-gradient(45deg, #FF0000, #FF3333, #FF6666, #FF9999, #0000FF, #3333FF, #6666FF, #9999FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3.5rem; 
+  font-weight: bold; 
+  margin: 0;
+  text-align: center;
 }
 
 .img-container {
-  object-fit: contain;
+  width: 90vw;
+  margin: 0;
+  padding: 0;
+} 
+
+.img-container img{
+  max-width: 100%
 }
+
+

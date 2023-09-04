@@ -1,5 +1,5 @@
  //Imports from node_modules
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import {FiAlignJustify} from 'react-icons/fi'
 
 //Components
@@ -7,27 +7,13 @@ import HeaderMenu from './HeaderMenu'
 import Logo from './Logo'
 import switchOpenState from '../helpers/switchOpenState'
 
-//Helpers or constants
-import {mobileWidth} from '../helpers/constants'
+//HOOKS
+import useWindowWith from '../services/useWindowWith'
 
 
 
 export default function Header() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-  const [isOpen, setOpen] = useState(mobileWidth(windowWidth))
-  
-  useEffect(() =>{
-    const handleRisize = () => {
-      setWindowWidth(window.innerWidth)
-    }
-
-    window.addEventListener('resize', handleRisize)
-
-    return () => {
-      window.removeEventListener('resize', handleRisize);
-    }
-  },[])
-  
+  const [isOpen, setOpen] = useState(useWindowWith < 768)
 
   return(
     <header className='main-header '>
@@ -36,7 +22,7 @@ export default function Header() {
         <FiAlignJustify className='menu-icon' style={{color:'white'}}/>
       </button>  
       )}
-      <HeaderMenu isOpen={isOpen} size={windowWidth}/>
+      <HeaderMenu isOpen={!isOpen} size={useWindowWith()}/>
     </header>
   )
 }

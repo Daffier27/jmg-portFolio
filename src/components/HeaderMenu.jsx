@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 export default function HeaderMenu ({ isOpen, size }) {
+  
   if(isOpen && size <= 768){
     return 
   }
